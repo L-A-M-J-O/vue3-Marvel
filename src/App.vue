@@ -1,9 +1,19 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { onMounted, ref } from "vue";
+import { RouterLink, RouterView } from "vue-router";
+import Layout from './ui/layout/Layout.vue';
+import { SuperHeroe } from "./domain/models/SuperHeroe";
+import { useData } from "./composables/useData";
+
+const { sendFormData, fetchDataList } = useData();
+const SuperHeroes = ref<SuperHeroe[]>();
+
+onMounted(async () => {
+  SuperHeroes.value = await fetchDataList();
+  console.log(SuperHeroes.value);
+});
 </script>
 
 <template>
-  <h1>HOLA MUNDO</h1>
-  <a class="btn btn-primary" href="#" role="button">Link</a>
-  <RouterView />
+  <layout />
 </template>

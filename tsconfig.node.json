@@ -10,7 +10,8 @@
   "compilerOptions": {
     "composite": true,
     "module": "ESNext",
+    "strict": true,
     "moduleResolution": "Bundler",
-    "types": ["node"]
+    "types": ["vue"]
   }
 }
