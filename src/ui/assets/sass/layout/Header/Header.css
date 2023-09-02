@@ -1,0 +1,36 @@
+.box-main_upper {
+  width: 100%;
+  position: relative;
+  font-family: "Roboto", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.btn-mode {
+  width: 100px;
+  border-radius: 0px;
+}
+
+.desktopNav__right-links {
+  font: 400 12px/1 "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  color: #e62429;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .box_upper {
+    height: 52px;
+    border-bottom: 1px solid #393939;
+    padding: 0px 20px;
+  }
+  .box-mode-upper {
+    position: relative;
+    display: block;
+    font-family: "Roboto", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    border-left: 1px solid #393939;
+    border-right: 1px solid #393939;
+  }
+}/*# sourceMappingURL=Header.css.map */
