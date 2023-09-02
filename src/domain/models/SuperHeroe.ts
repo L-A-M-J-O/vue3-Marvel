@@ -1,4 +1,4 @@
-import type {ISuperHeroe } from "../../interfaces/SuperHeroe"
+import type {ISuperHeroe, thumbnailImage } from "../../interfaces/SuperHeroe"
 
 export class SuperHeroe implements ISuperHeroe {
   constructor(
@@ -10,7 +10,7 @@ export class SuperHeroe implements ISuperHeroe {
     public resourceURI: string,
     public series: Object,
     public stories: Object,
-    public thumbnail: Object,
+    public thumbnail: thumbnailImage,
     public urls: Object[],
   ) {}
 }

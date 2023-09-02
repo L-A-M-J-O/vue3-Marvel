@@ -6,6 +6,7 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
 }
 .btn-mode {
   width: 100px;
@@ -18,7 +19,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .box_upper {
     height: 52px;
     border-bottom: 1px solid #393939;

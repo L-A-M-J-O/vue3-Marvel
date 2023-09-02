@@ -19220,6 +19220,38 @@ progress {
     border-right: 1px solid #393939;
   }
 }
+.header-sprite-p {
+  font: 400 12px/1 "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  color: #040d12;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  font-weight: 800;
+}
+
+.card-group {
+  width: 300px;
+  height: 600px;
+}
+
+.box-img {
+  width: auto;
+  height: 300px;
+}
+
+.box-information {
+  background-color: #040d12;
+  border-top: 0.5rem solid #f11f22;
+  width: 100%;
+  height: 300px;
+}
+
+.img-super {
+  width: 300px;
+  height: 300px;
+}
+
 .mvl-card--explore,
 .mvl-card--media,
 .mvl-card--lob,
@@ -19229,38 +19261,17 @@ progress {
   position: relative;
 }
 
-.mvl-card--explore {
-  color: #fff;
-  max-width: 100%;
-  transition: color 0.3s;
-}
-
-.mvl-card--explore:hover {
-  box-sizing: border-box;
-  position: relative;
-}
-
 .mvl-card--explore .card-thumb-frame {
   background: #e62429;
   margin: 0;
   overflow: hidden;
   padding: 0;
-  height: 387px;
-  transition: transform 0.5s;
-}
-
-.mvl-card--explore .card-thumb-frame:hover {
-  background: #e62429;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  color: #fff;
-  transform: translateX(0.5rem);
 }
 
 .mvl-card--explore .card-body.is-sliding {
   background: #151515;
   transition: color 0.3s;
+  height: 387px;
 }
 
 .mvl-card--explore .card-body__headline {
@@ -19308,58 +19319,8 @@ progress {
   transition: color 0.3s;
 }
 
-.header-sprite-p {
-  font: 400 12px/1 "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
-  color: #040d12;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 15px;
-  letter-spacing: 0.3px;
-  font-weight: 800;
-}
-
-.mvl-flyout__cta-title {
-  margin: 0 0 10px 0;
-  text-align: center;
-  font-family: "RobotoCondensed", "Trebuchet MS", Helvetica, Arial, sans-serif;
-  font-size: 34px;
-  font-weight: 800;
-  line-height: 40px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #151515;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-[data-bs-theme=dark] .mvl-card--explore {
-  color: #151515;
-}
-
-[data-bs-theme=dark] .mvl-card--explore::after {
-  border-right-color: #212529;
-}
-
-[data-bs-theme=dark] .mvl-flyout__cta-title {
+[data-bs-theme=dark] .header-sprite-h1 {
   color: white;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

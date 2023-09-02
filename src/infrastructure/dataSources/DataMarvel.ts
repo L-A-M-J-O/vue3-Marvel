@@ -1,5 +1,5 @@
 // cores/DataCore.js
-import { sendDataRequest, sendDataRequestID } from '../externalServices/getDataMarvel';
+import { sendDataRequest, sendDataRequestID,sendDataRequestImage } from '../externalServices/getDataMarvel';
 import { SuperHeroe } from '../../domain/models/SuperHeroe';
 export async function sendData() {
     // Realizar lógica adicional si es necesario
@@ -10,8 +10,12 @@ export async function listData(): Promise<SuperHeroe[]> {
     return response.results
 }
 
+export async function listDataImage() {
+    const response = await sendDataRequestImage();
+    return response
+}
+
 export async function DetailsData(id: number) {
     const response = await sendDataRequestID(id);
-    console.log(response.results)
     return response.results
 }

@@ -1,5 +1,9 @@
 $primary: #6504b5;
-
+* {
+  font-family: "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial,
+    sans-serif;
+  font-weight: normal;
+}
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../../../node_modules/bootstrap/scss/buttons";
 // Option B: Include parts of Bootstrap
@@ -33,10 +37,17 @@ $primary: #6504b5;
 @import "../../../../node_modules/bootstrap/scss/utilities/api";
 
 @import "../sass/layout/Header/Header.scss";
+@import "../sass/views/Home.scss";
 
-[data-bs-theme="dark"] .box-main_upper {
-    box-shadow: 1px #080808;
+[data-bs-theme="dark"] .mvl-card--explore {
+  color: #151515;
+}
+[data-bs-theme="dark"] .mvl-card--explore::after {
+  border-right-color: #212529;
+}
+[data-bs-theme="dark"] .mvl-flyout__cta-title {
+  color: white;
 }
 [data-bs-theme="light"] .box-main_upper {
-    box-shadow: 1px #080808;
+
 }

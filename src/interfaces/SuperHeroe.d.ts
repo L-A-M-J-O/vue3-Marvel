@@ -7,6 +7,10 @@ export interface ISuperHeroe {
   resourceURI: string | undefined;
   series: Object;
   stories: Object;
-  thumbnail: Object;
+  thumbnail: thumbnailImage;
   urls: Object[];
+}
+export interface thumbnailImage extends ISuperHeroe{
+  extension: string | undefined;
+  path: string | undefined;
 }

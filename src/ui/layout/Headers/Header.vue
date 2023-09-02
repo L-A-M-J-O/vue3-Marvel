@@ -18,7 +18,7 @@ const alterMode = () => {
 <template>
   <header>
     <nav>
-      <div class="container-fluid box-main_upper">
+      <div class="container-fluid box-main_upper position-absolute-top">
         <div class="box_upper">
           <div class="row d-flex justify-content-center align-items-center">
             <div class="col-12 col-md-2 col-lg-2 col-xl-2 text-center">
