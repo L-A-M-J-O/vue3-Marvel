@@ -2,13 +2,13 @@
   font-family: "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial,
     sans-serif;
   font-weight: normal;
-  }
+}
 @import "../sass/layout/Header/Header.scss";
+@import "../sass/layout/Footer/Footer.scss";
 @import "../sass/views/Home.scss";
 @import "../sass/views/SuperDetails.scss";
 
 $primary: #f5f5f5;
-
 
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../../../node_modules/bootstrap/scss/buttons";

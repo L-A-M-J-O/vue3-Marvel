@@ -1,4 +1,5 @@
 .box-main_upper {
+  background-color: rgba(0, 0, 0, 0.08);
   width: 100%;
   position: relative;
   font-family: "Roboto", "Trebuchet MS", Helvetica, Arial, sans-serif;
@@ -25,7 +26,7 @@
     border-bottom: 1px solid #393939;
     padding: 0px 20px;
   }
-  
+
   .box-mode-upper {
     position: relative;
     display: block;

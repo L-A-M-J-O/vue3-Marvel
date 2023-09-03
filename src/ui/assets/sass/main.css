@@ -5,6 +5,7 @@
 }
 
 .box-main_upper {
+  background-color: rgba(0, 0, 0, 0.08);
   width: 100%;
   position: relative;
   font-family: "Roboto", "Trebuchet MS", Helvetica, Arial, sans-serif;
@@ -39,6 +40,97 @@
     font-family: "Roboto", "Trebuchet MS", Helvetica, Arial, sans-serif;
     border-left: 1px solid #393939;
     border-right: 1px solid #393939;
+  }
+}
+.inherited-styles-for-exported-element {
+  color: #333;
+  font-family: CerebriSans-Regular, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  font-size: 100%;
+}
+
+footer {
+  border-top: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  left: 0;
+  padding: 10% 7%;
+  position: absolute;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 5rem 3rem;
+  }
+}
+.inner {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 60em;
+}
+
+@media screen and (min-width: 768px) {
+  .inner {
+    flex-direction: row;
+  }
+}
+.inner ul {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.inner a {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.inner li {
+  color: #afb2b8;
+  margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .inner ul {
+    flex: 1;
+    margin: 0 2em;
+  }
+}
+.inner ul p {
+  margin-top: 0;
+}
+
+.inner > :first-child {
+  margin-bottom: 1.5em;
+  margin-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .inner > :first-child {
+    display: block;
+    margin-right: 3em;
+    text-align: center;
+  }
+}
+.inner > :first-child img {
+  width: 40px;
+}
+
+.inner > :first-child p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.7em;
+  margin-bottom: 0;
+}
+
+.inner a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .inner > :first-child img {
+    width: 70px;
   }
 }
 .mvl-card--explore,
@@ -245,6 +337,30 @@
     height: auto;
   }
 }
+.button-49,
+.button-49:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00e6f6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-49:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
 /* CSS */
 .button-49,
 .button-49:after {
