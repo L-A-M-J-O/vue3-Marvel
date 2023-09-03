@@ -1,4 +1,5 @@
 .box-main_upper {
+  background-color: rgba(0, 0, 0, 0.08);
   width: 100%;
   position: relative;
   font-family: "Roboto", "Trebuchet MS", Helvetica, Arial, sans-serif;
@@ -6,7 +7,7 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .btn-mode {

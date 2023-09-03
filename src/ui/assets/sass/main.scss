@@ -4,11 +4,12 @@
   font-weight: normal;
   box-sizing: border-box;
 }
+$warn-proprietary-syntax: false;
 @import "../sass/layout/Header/Header.scss";
 @import "../sass/layout/Footer/Footer.scss";
 @import "../sass/views/Home.scss";
 @import "../sass/views/SuperDetails.scss";
-
+@import "../sass/components//Comics.scss";
 $primary: #f5f5f5;
 
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -71,7 +72,7 @@ $color-border-dark: #212529;
     background-color: #151515;
   }
   hr.sep-3 {
-     background-image: linear-gradient(to right, #ffff, #ffff, #ffff);
+    background-image: linear-gradient(to right, #ffff, #ffff, #ffff);
   }
   hr.sep-3::after {
     background-color: #212529;
