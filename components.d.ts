@@ -7,6 +7,8 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ElAutocomplete: typeof import('element-plus/es')['ElAutocomplete']
+    ElInput: typeof import('element-plus/es')['ElInput']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

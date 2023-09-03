@@ -2,6 +2,7 @@
   font-family: "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial,
     sans-serif;
   font-weight: normal;
+  box-sizing: border-box;
 }
 @import "../sass/layout/Header/Header.scss";
 @import "../sass/layout/Footer/Footer.scss";
@@ -55,7 +56,41 @@ $color-border-dark: #212529;
       background: $color-background-dark;
     }
   }
-
+  .el-input__wrapper {
+    background-color: #212529;
+    box-shadow: #151515 4px 4px 0 0, #000 4px 4px 0 1px;
+    color: $color-text-light;
+  }
+  .element-input {
+    box-shadow: #151515 4px 4px 0 0, #000 4px 4px 0 1px;
+  }
+  .button-50 {
+    box-shadow: #151515 4px 4px 0 0, #000 4px 4px 0 1px;
+  }
+  .box-details_col {
+    background-color: #151515;
+  }
+  hr.sep-3 {
+     background-image: linear-gradient(to right, #ffff, #ffff, #ffff);
+  }
+  hr.sep-3::after {
+    background-color: #212529;
+  }
+  .mvl-flyout__cta-title__d {
+    color: $color-text-light;
+  }
+  .box-border {
+    border: 1px solid #f5f5f5;
+  }
+  .inner {
+    color: #f5f5f5;
+  }
+  .footer-a {
+    color: $color-text-light;
+  }
+  .swiper-slide {
+    background-color: transparent;
+  }
   .header-sprite-p {
     color: $color-text-light;
   }

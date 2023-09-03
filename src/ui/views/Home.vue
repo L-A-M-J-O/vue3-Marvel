@@ -1,20 +1,47 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
-
+import { onMounted, ref, watch } from "vue";
 import { SuperHeroe } from "../../domain/models/SuperHeroe";
 import { useData } from "../../composables/useData";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import Comics from "../components/Comics.vue";
 
 // import required modules
-const { fetchDataList, fetchDataListImage } = useData();
+const { fetchDataList, fetchDataListImage, fetchDataName } = useData();
 const SuperHeroes = ref<SuperHeroe[]>();
+const SuperHeroesName = ref<SuperHeroe[]>();
 const events = ref();
+const name = ref("");
+const nameVacio = ref<boolean>(false);
 const modules = ref([Autoplay, Pagination, Navigation]);
+
+watch(
+  () => name.value,
+  async () => {
+    if (name.value.length == 0) {
+      SuperHeroes.value = await fetchDataList();
+      nameVacio.value = false;
+    }
+  }
+);
+document.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    handleSearch();
+  }
+});
+const handleSearch = async () => {
+  SuperHeroesName.value = await fetchDataName(name.value);
+  SuperHeroes.value = await fetchDataName(name.value);
+  if (SuperHeroesName.value?.length == 0) {
+    nameVacio.value = true;
+  } else {
+    nameVacio.value = false;
+  }
+};
 onMounted(async () => {
-  SuperHeroes.value = await fetchDataList();
+  // SuperHeroes.value = await fetchDataList();
   events.value = await fetchDataListImage();
 });
 </script>
@@ -43,7 +70,35 @@ onMounted(async () => {
           /></swiper-slide>
         </swiper>
       </div>
-      <div class="row justify-content-center">
+      <!-- <div class="row justify-content-center">
+        <div class="col-12 my-4">
+          <hr class="sep-3" />
+          <div class="logo">Characters</div>
+          <div class="row justify-content-center">
+            <div class="col-6 text-center">
+              <el-input
+                clearable
+                v-model="name"
+                class="element-input w-50 mb-2 bg-transparent"
+                size="large"
+                placeholder="Search Enter.."
+              />
+              <button
+                class="button-50 mx-4"
+                role="button"
+                @click="handleSearch"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          v-if="nameVacio"
+          class="col-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 m-2"
+        >
+          <h6>No encontramos tu Super Heroe</h6>
+        </div>
         <div
           class="col-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 m-2"
           v-for="Heroe in SuperHeroes"
@@ -76,7 +131,8 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
+      <Comics />
     </div>
   </div>
 </template>

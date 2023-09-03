@@ -22,15 +22,25 @@
               ></path></svg
           ></span>
         </div>
-        <p style="margin-bottom: 0.5em">© 2023 CSS Scan</p>
       </div>
       <ul>
         <p>Product</p>
-        <li><a href="https://getcssscan.com/#demo">Free demo</a></li>
-        <li><a href="https://getcssscan.com/#features">Features</a></li>
-        <li><a href="https://getcssscan.com/#testimonials">Testimonials</a></li>
+        <li>
+          <a class="footer-a" href="https://getcssscan.com/#demo">Free demo</a>
+        </li>
+        <li>
+          <a class="footer-a" href="https://getcssscan.com/#features"
+            >Features</a
+          >
+        </li>
+        <li>
+          <a class="footer-a" href="https://getcssscan.com/#testimonials"
+            >Testimonials</a
+          >
+        </li>
         <li>
           <a
+            class="footer-a"
             href="https://www.youtube.com/watch?v=IzBQsyERVSs&amp;rel=0&amp;start=117&amp;autoplay=1"
             data-lity=""
             >In-depth video review</a
@@ -38,6 +48,7 @@
         </li>
         <li>
           <a
+            class="footer-a"
             href="https://gumroad.com/gvrizzo/affiliates"
             target="_blank"
             rel="noopener noreferrer"
@@ -47,6 +58,7 @@
         <li><a href="https://getcssscan.com/blog" target="_blank">Blog</a></li>
         <li>
           <a
+            class="footer-a"
             href="https://headwayapp.co/css-scan-changelog"
             target="_blank"
             rel="noopener noreferrer"
@@ -54,7 +66,10 @@
           >
         </li>
         <li>
-          <a href="https://csspro.com/?ref=getcssscan" target="_blank"
+          <a
+            class="footer-a"
+            href="https://csspro.com/?ref=getcssscan"
+            target="_blank"
             >CSS Pro</a
           >
         </li>
@@ -63,26 +78,33 @@
         <p>Free tools</p>
         <li>
           <a
+            class="footer-a"
             href="https://getcssscan.com/css-box-shadow-examples"
             target="_blank"
-            class=""
             >🟢 Beautiful CSS box-shadow examples</a
           >
         </li>
         <li>
-          <a href="https://getcssscan.com/css-buttons-examples" target="_blank"
+          <a
+            class="footer-a"
+            href="https://getcssscan.com/css-buttons-examples"
+            target="_blank"
             >🟢 Beautiful CSS buttons examples</a
           >
         </li>
         <li>
           <a
+            class="footer-a"
             href="https://getcssscan.com/css-checkboxes-examples"
             target="_blank"
             >🟢 Beautiful CSS checkboxes examples</a
           >
         </li>
         <li>
-          <a href="https://getcssscan.com/css-shapes" target="_blank"
+          <a
+            class="footer-a"
+            href="https://getcssscan.com/css-shapes"
+            target="_blank"
             >🟢 CSS shapes examples</a
           >
         </li>
@@ -90,24 +112,32 @@
       <ul>
         <p>Support</p>
         <li>
-          <a href="https://mycssscan.com/?ref=getcssscan" target="_blank"
+          <a
+            class="footer-a"
+            href="https://mycssscan.com/?ref=getcssscan"
+            target="_blank"
             >Forgot my license</a
           >
         </li>
         <li>
           <a
+            class="footer-a"
             href="https://mycssscan.com/?ref=getcssscan"
             target="_blank"
-            class=""
             >Manage my license</a
           >
         </li>
-        <li><a href="https://getcssscan.com/#" id="contact">Contact</a></li>
+        <li>
+          <a class="footer-a" href="https://getcssscan.com/#" id="contact"
+            >Contact</a
+          >
+        </li>
       </ul>
       <ul>
         <p>Social</p>
         <li>
           <a
+            class="footer-a"
             href="https://www.facebook.com/cssscan/"
             target="_blank"
             rel="noopener noreferrer"
@@ -116,15 +146,16 @@
         </li>
         <li class="">
           <a
+            class="footer-a"
             href="https://twitter.com/cssscan"
             target="_blank"
             rel="noopener noreferrer"
-            class=""
             >Twitter</a
           >
         </li>
         <li>
           <a
+            class="footer-a"
             href="https://instagram.com/cssscan"
             target="_blank"
             rel="noopener noreferrer"

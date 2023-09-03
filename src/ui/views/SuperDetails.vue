@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
 import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -33,7 +33,7 @@ onMounted(async () => {
         class="col-sm-12 col-md-12 col-lg-12 col-xl-4 box-main-details-img p-0"
       >
         <div class="d-flex justify-content-center">
-          <div class="col-12">
+          <div class="col-12 box-border">
             <h3 class="header-sprite-p text-center m-2">
               Ranking #{{ details.id }}
             </h3>
@@ -58,7 +58,7 @@ onMounted(async () => {
         </div>
         <div class="row box-details d-flex align-items-center">
           <div
-            class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 box-details_col"
+            class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 box-details_col box-border"
           >
             <p class="mvl-flyout__cta-p__d m-3">
               <span>
@@ -75,12 +75,12 @@ onMounted(async () => {
     </div>
     <div
       id="comics"
-      class="row justify-content-around box-main-comics mt-sm-5 mt-md-0"
+      class="row justify-content-center box-main-comics mt-sm-5 mt-md-0"
     >
       <div class="large mvl-flyout__cta-title text-center my-3">Comics</div>
       <swiper
-        :slidesPerView="3"
-        :spaceBetween="30"
+        :slidesPerView="4"
+        :spaceBetween="0"
         :freeMode="true"
         :pagination="{
           clickable: true,
@@ -89,7 +89,9 @@ onMounted(async () => {
         class="mySwiper"
       >
         <swiper-slide v-for="item in comicsHeroe">
-          <div class="bg-primary p-0 border border-5 border-black m-2">
+          <div
+            class="box-details_col col-sm-12 col-md-12 col-ld-12 col-xl-10 col-xxl-10 p-sm-2"
+          >
             <img
               class="img-super-details"
               :src="item.thumbnail.path + `.` + item.thumbnail.extension"
@@ -100,7 +102,7 @@ onMounted(async () => {
                 <span> Detalles </span>
               </p>
             </button>
-            <p class="mvl-flyout__cta-p__d m-3">
+            <p class="mvl-flyout__cta-p__d_d m-3">
               <span>
                 {{ item.title }}
               </span>

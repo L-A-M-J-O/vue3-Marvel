@@ -31,11 +31,13 @@
 }
 .button-49,
 .button-49:after {
-  width: 150px;
-  height: 76px;
+  width: 120px;
+  height: 56px;
   line-height: 78px;
-  font-size: 20px;
-  font-family: "Bebas Neue", sans-serif;
+  font-size: 10px;
+  font: 400 10px/1.1 "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
   border: 0;
   color: #fff;
@@ -56,11 +58,13 @@
 /* CSS */
 .button-49,
 .button-49:after {
-  width: 150px;
-  height: 76px;
+  width: 80px;
+  height: 30px;
   line-height: 78px;
-  font-size: 20px;
-  font-family: "Bebas Neue", sans-serif;
+  font-size: 10px;
+  font: 400 10px/1.1 "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
   border: 0;
   color: #fff;
@@ -97,6 +101,17 @@
   animation-timing-function: steps(2, end);
 }
 
+@media (min-width: 992px) {
+  .button-49,
+  .button-49:after {
+    font-size: 16px;
+    width: 120px;
+    height: 56px;
+  }
+  .mvl-flyout__cta-p__d_d {
+    font-size: 20px;
+  }
+}
 @keyframes glitch {
   0% {
     clip-path: var(--slice-1);
