@@ -19,9 +19,9 @@ onMounted(async () => {
 });
 </script>
 <template>
-  <div class="container-fluid mt-2 position-relative">
+  <div class="container-flu id mt-2 position-relative">
     <div class="row justify-content-center m-0 m-md-4">
-      <div class="large mvl-flyout__cta-title text-center m-2">
+      <div class="large mvl-flyout__cta-title text-center my-3">
         Trending in the universe
       </div>
       <div class="col-12">

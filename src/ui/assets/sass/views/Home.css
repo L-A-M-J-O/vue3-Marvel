@@ -37,7 +37,7 @@
 }
 
 .mvl-card--explore .card-body.is-sliding {
-  background: #151515;
+  background: #212529;
   transition: color 0.3s;
 }
 
@@ -57,6 +57,7 @@
   width: 100%;
   height: 380px;
   object-fit: cover;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
 }
 
 .mvl-card--explore::after {
@@ -91,14 +92,13 @@
   color: #040d12;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: 0.3px;
   font-weight: 800;
 }
 
 .mvl-flyout__cta-title {
   margin: 0 0 10px 0;
-  text-align: center;
   font-family: "RobotoCondensed", "Trebuchet MS", Helvetica, Arial, sans-serif;
   font-size: 34px;
   font-weight: 800;
@@ -106,6 +106,47 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #151515;
+}
+
+.mvl-flyout__cta-span {
+  margin: 0 0 10px 0;
+  font-family: "RobotoCondensed", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e62429;
+}
+
+.mvl-flyout__cta-title__d {
+  margin: 0 0 10px 0;
+  font-family: "RobotoCondensed", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #151515;
+}
+
+.mvl-flyout__cta-span__d {
+  margin: 0 0 10px 0;
+  font-family: "RobotoCondensed", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e62429;
+}
+
+.mvl-flyout__cta-p__d {
+  margin: 0 0 10px 0;
+  font-family: "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .swiper {

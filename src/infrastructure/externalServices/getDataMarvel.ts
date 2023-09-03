@@ -15,16 +15,16 @@ export async function sendDataRequest() {
 export async function sendDataRequestImage() {
     try {
         const response = await axios.get(`https://gateway.marvel.com:443/v1/public/events?ts=1&apikey=${clavePublic}&hash=${hashed}`);
-        
+
         const dataImage = response.data.data.results;
-        
+
         if (dataImage.length > 0) {
             const miniaturas = dataImage.map((personaje: any) => {
                 return {
                     image: personaje.thumbnail.path + '.' + personaje.thumbnail.extension,
                 };
             });
-            
+
             return miniaturas;
         } else {
             throw new Error('No se encontraron imagenes.');
@@ -36,6 +36,24 @@ export async function sendDataRequestImage() {
 export async function sendDataRequestID(id: number) {
     try {
         const response = await axios.get(`https://gateway.marvel.com:443/v1/public/characters/${id}?ts=1&apikey=${clavePublic}&hash=${hashed}`)
+            .then(({ data }) => { return data.data });
+        return response
+    } catch (error) {
+        throw error;
+    }
+}
+export async function sendDataRequestIDComics(id: number) {
+    try {
+        const response = await axios.get(`https://gateway.marvel.com:443/v1/public/characters/${id}/comics?ts=1&apikey=${clavePublic}&hash=${hashed}`)
+            .then(({ data }) => { return data.data });
+        return response
+    } catch (error) {
+        throw error;
+    }
+}
+export async function sendDataRequestIDSeries(id: number) {
+    try {
+        const response = await axios.get(`https://gateway.marvel.com:443/v1/public/characters/${id}/series?ts=1&apikey=${clavePublic}&hash=${hashed}`)
             .then(({ data }) => { return data.data });
         return response
     } catch (error) {
