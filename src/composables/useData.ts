@@ -1,5 +1,5 @@
 // composables/useData.js
-import { sendData, listData, DetailsData, listDataImage, DetailsDataComics, DetailsDataSeries, ListDataName, listDataComics } from '../infrastructure/dataSources/DataMarvel';
+import { sendData, listData, DetailsData, listDataImage, DetailsDataComics, DetailsDataSeries, ListDataName, listDataComics, listDataComicsName, listDataSeries } from '../infrastructure/dataSources/DataMarvel';
 export function useData() {
   function sendFormData() {
     return sendData();
@@ -12,6 +12,12 @@ export function useData() {
   }
   function fetchDataName(name: string) {
     return ListDataName(name)
+  }
+  function fetchDataSeries(){
+    return listDataSeries()
+  }
+  function fetchDataComicsName(name: string) {
+    return listDataComicsName(name)
   }
   function fetchDataComics() {
     return listDataComics();
@@ -26,6 +32,8 @@ export function useData() {
     return DetailsDataSeries(id);
   }
   return {
+    fetchDataSeries,
+    fetchDataComicsName,
     fetchDataComics,
     DetailsSeries,
     DetailsComics,

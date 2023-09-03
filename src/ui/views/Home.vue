@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import Comics from "../components/Comics.vue";
-
+import Comics from "../views/Comics.vue";
+import Series from "../views/Series.vue";
 // import required modules
 const { fetchDataList, fetchDataListImage, fetchDataName } = useData();
 const SuperHeroes = ref<SuperHeroe[]>();
@@ -26,11 +26,6 @@ watch(
     }
   }
 );
-document.addEventListener("keyup", function (event) {
-  if (event.key === "Enter") {
-    handleSearch();
-  }
-});
 const handleSearch = async () => {
   SuperHeroesName.value = await fetchDataName(name.value);
   SuperHeroes.value = await fetchDataName(name.value);
@@ -40,8 +35,13 @@ const handleSearch = async () => {
     nameVacio.value = false;
   }
 };
+document.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    handleSearch();
+  }
+});
 onMounted(async () => {
-  // SuperHeroes.value = await fetchDataList();
+  SuperHeroes.value = await fetchDataList();
   events.value = await fetchDataListImage();
 });
 </script>
@@ -70,7 +70,7 @@ onMounted(async () => {
           /></swiper-slide>
         </swiper>
       </div>
-      <!-- <div class="row justify-content-center">
+      <div class="row justify-content-center">
         <div class="col-12 my-4">
           <hr class="sep-3" />
           <div class="logo">Characters</div>
@@ -131,8 +131,9 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
       <Comics />
+      <Series />
     </div>
   </div>
 </template>

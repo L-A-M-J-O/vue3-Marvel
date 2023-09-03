@@ -1,0 +1,56 @@
+$highlight: #5bc0eb;
+$darkhighlight: #fde74c;
+
+.img-series {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.cardS-container {
+  flex: 300px;
+  margin: 30px;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  .cardS {
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    a {
+      padding: 30px;
+      width: 100%;
+      border: 2px solid black;
+      text-decoration: none;
+      color: black;
+      display: block;
+      transition: 0.25s ease;
+    }
+
+    .cardS--border {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border: 2px dashed black;
+      z-index: -1;
+    }
+
+    &.cardS--dark {
+      a {
+        color: white;
+        background-color: black;
+        border-color: black;
+
+        .cardS--hover {
+          .link {
+            color: $darkhighlight;
+          }
+        }
+      }
+    }
+  }
+}

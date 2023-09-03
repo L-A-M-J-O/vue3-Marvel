@@ -14,7 +14,25 @@ export async function sendDataRequest() {
 }
 export async function sendDataRequestComics() {
     try {
-        const response = await axios.get(`https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=${clavePublic}&hash=${hashed}&limit=30`)
+        const response = await axios.get(`https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=${clavePublic}&hash=${hashed}&limit=9`)
+            .then((data) => { return data.data.data });
+        return response
+    } catch (error) {
+        throw error;
+    }
+}
+export async function sendDataRequestSeries() {
+    try {
+        const response = await axios.get(`https://gateway.marvel.com:443/v1/public/series?ts=1&apikey=${clavePublic}&hash=${hashed}&limit=10`)
+            .then((data) => { return data.data.data });
+        return response
+    } catch (error) {
+        throw error;
+    }
+}
+export async function sendDataRequestComicsName(name: string) {
+    try {
+        const response = await axios.get(`https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=${clavePublic}&hash=${hashed}&titleStartsWith=${name}`)
             .then((data) => { return data.data.data });
         return response
     } catch (error) {

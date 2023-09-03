@@ -77,7 +77,10 @@ onMounted(async () => {
       id="comics"
       class="row justify-content-center box-main-comics mt-sm-5 mt-md-0"
     >
-      <div class="large mvl-flyout__cta-title text-center my-3">Comics</div>
+      <div class="col-12 my-4">
+        <hr class="sep-3" />
+        <div class="logo">Comics - {{ details.name }}</div>
+      </div>
       <swiper
         :slidesPerView="4"
         :spaceBetween="0"
@@ -112,7 +115,10 @@ onMounted(async () => {
       </swiper>
     </div>
     <div id="series" class="row justify-content-center">
-      <div class="large mvl-flyout__cta-title text-center my-3">Series</div>
+      <div class="col-12 my-4">
+        <hr class="sep-3" />
+        <div class="logo">Series - {{ details.name }}</div>
+      </div>
       <div
         class="col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3"
         v-for="serie in seriesHeroe"
