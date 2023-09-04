@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
+import { Comic } from "../../domain/models/Comic";
 import { useStore } from "../../stores/index";
 import { useData } from "../../composables/useData";
 const name = ref("");
-const comics = ref([]);
-const comicsName = ref([]);
+const comics = ref<Comic[]>();
+const comicsName = ref<Comic[]>();
 const store = useStore();
 const nameVacio = ref<boolean>(false);
 const { fetchDataComics, fetchDataComicsName } = useData();

@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
 import { useData } from "../../composables/useData";
+import { Serie } from "../../domain/models/Serie";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { EffectCreative, Autoplay } from "swiper/modules";
 const name = ref("");
-const series = ref([]);
+const series = ref<Serie[]>();
 const modules = [EffectCreative, Autoplay];
-const seriesName = ref([]);
+const seriesName = ref<Serie[]>();
 const nameVacio = ref<boolean>(false);
 const { fetchDataSeries, fetchDataSeriesName } = useData();
 watch(
@@ -34,6 +35,7 @@ document.addEventListener("keyup", function (event) {
 });
 onMounted(async () => {
   series.value = await fetchDataSeries();
+  console.log(series.value);
 });
 </script>
 <template>

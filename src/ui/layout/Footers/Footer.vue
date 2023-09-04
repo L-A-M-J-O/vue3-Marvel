@@ -26,22 +26,22 @@
       <ul>
         <p>Product</p>
         <li>
-          <a class="footer-a" href="https://getcssscan.com/#demo">Free demo</a>
+          <a class="footer-a" href="#">Free demo</a>
         </li>
         <li>
-          <a class="footer-a" href="https://getcssscan.com/#features"
+          <a class="footer-a" href="#"
             >Features</a
           >
         </li>
         <li>
-          <a class="footer-a" href="https://getcssscan.com/#testimonials"
+          <a class="footer-a" href="#"
             >Testimonials</a
           >
         </li>
         <li>
           <a
             class="footer-a"
-            href="https://www.youtube.com/watch?v=IzBQsyERVSs&amp;rel=0&amp;start=117&amp;autoplay=1"
+            href="#"
             data-lity=""
             >In-depth video review</a
           >
@@ -49,17 +49,17 @@
         <li>
           <a
             class="footer-a"
-            href="https://gumroad.com/gvrizzo/affiliates"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             >Affiliate Program</a
           >
         </li>
-        <li><a href="https://getcssscan.com/blog" target="_blank">Blog</a></li>
+        <li><a href="#" target="_blank">Blog</a></li>
         <li>
           <a
             class="footer-a"
-            href="https://headwayapp.co/css-scan-changelog"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             >✏️ Changelog</a
@@ -68,7 +68,7 @@
         <li>
           <a
             class="footer-a"
-            href="https://csspro.com/?ref=getcssscan"
+            href="#"
             target="_blank"
             >CSS Pro</a
           >
@@ -79,7 +79,7 @@
         <li>
           <a
             class="footer-a"
-            href="https://getcssscan.com/css-box-shadow-examples"
+            href="#"
             target="_blank"
             >🟢 Beautiful CSS box-shadow examples</a
           >
@@ -87,7 +87,7 @@
         <li>
           <a
             class="footer-a"
-            href="https://getcssscan.com/css-buttons-examples"
+            href="#"
             target="_blank"
             >🟢 Beautiful CSS buttons examples</a
           >
@@ -95,7 +95,7 @@
         <li>
           <a
             class="footer-a"
-            href="https://getcssscan.com/css-checkboxes-examples"
+            href="#"
             target="_blank"
             >🟢 Beautiful CSS checkboxes examples</a
           >
@@ -103,7 +103,7 @@
         <li>
           <a
             class="footer-a"
-            href="https://getcssscan.com/css-shapes"
+            href="#"
             target="_blank"
             >🟢 CSS shapes examples</a
           >
@@ -114,7 +114,7 @@
         <li>
           <a
             class="footer-a"
-            href="https://mycssscan.com/?ref=getcssscan"
+            href="#"
             target="_blank"
             >Forgot my license</a
           >
@@ -122,13 +122,13 @@
         <li>
           <a
             class="footer-a"
-            href="https://mycssscan.com/?ref=getcssscan"
+            href="#"
             target="_blank"
             >Manage my license</a
           >
         </li>
         <li>
-          <a class="footer-a" href="https://getcssscan.com/#" id="contact"
+          <a class="footer-a" href="#" id="contact"
             >Contact</a
           >
         </li>
@@ -138,7 +138,7 @@
         <li>
           <a
             class="footer-a"
-            href="https://www.facebook.com/cssscan/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             >Facebook</a
@@ -147,7 +147,7 @@
         <li class="">
           <a
             class="footer-a"
-            href="https://twitter.com/cssscan"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             >Twitter</a
@@ -156,7 +156,7 @@
         <li>
           <a
             class="footer-a"
-            href="https://instagram.com/cssscan"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             >Instagram</a
