@@ -2,16 +2,39 @@
 import { onMounted, ref, watch } from "vue";
 import { useData } from "../../composables/useData";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { EffectCreative } from "swiper/modules";
+import { EffectCreative, Autoplay } from "swiper/modules";
 const name = ref("");
 const series = ref([]);
-const modules = [EffectCreative];
+const modules = [EffectCreative, Autoplay];
 const seriesName = ref([]);
 const nameVacio = ref<boolean>(false);
-const { fetchDataSeries } = useData();
+const { fetchDataSeries, fetchDataSeriesName } = useData();
+watch(
+  () => name.value,
+  async () => {
+    if (name.value.length == 0) {
+      series.value = await fetchDataSeries();
+      nameVacio.value = false;
+    }
+  }
+);
+const handleSearch = async () => {
+  seriesName.value = await fetchDataSeriesName(name.value);
+  series.value = await fetchDataSeriesName(name.value);
+  if (seriesName.value?.length == 0) {
+    nameVacio.value = true;
+  } else {
+    nameVacio.value = false;
+  }
+};
+document.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    handleSearch();
+  }
+});
 onMounted(async () => {
   series.value = await fetchDataSeries();
-  console.log(series.value);
+  console.log(seriesName.value);
 });
 </script>
 <template>
@@ -37,6 +60,10 @@ onMounted(async () => {
       </div>
       <div class="col-12">
         <swiper
+          :autoplay="{
+            delay: 2000,
+            disableOnInteraction: false,
+          }"
           :grabCursor="true"
           :effect="'creative'"
           :creativeEffect="{
@@ -66,6 +93,15 @@ onMounted(async () => {
                   <p class="mvl-flyout__cta-p__d m-3">
                     <span>
                       {{ serie.modified }}
+                    </span>
+                  </p>
+                  <p class="mvl-flyout__cta-p__d m-3">
+                    <span>
+                      {{
+                        serie.description
+                          ? serie.description
+                          : "I can't find the description, sorry. ⛔"
+                      }}
                     </span>
                   </p>
                   <button class="button-49">

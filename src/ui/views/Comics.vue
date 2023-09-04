@@ -56,28 +56,34 @@ onMounted(async () => {
   </div>
   <div class="container m-5">
     <div class="row justify-content-center m-5">
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xl-4">
-        <div class="box-comics">
-          <div class="carousel">
-            <div class="carousel__item" v-for="comic in comics">
-              <div class="row"></div>
-              <div class="carousel__item-head">
-                <img
-                  width="120"
-                  :src="comic.thumbnail.path + `.` + comic.thumbnail.extension"
-                  alt="character"
-                />
-              </div>
-              <div class="carousel__item-body">
-                <p class="title">{{ comic.title }}</p>
-                <p>{{ comic.pageCount }}</p>
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xl-12">
+        <div class="row justify-content-center">
+          <div class="col-12 m-5">
+            <div class="box-comics">
+              <div class="carousel">
+                <div class="carousel__item" v-for="comic in comics">
+                  <div class="row"></div>
+                  <div class="carousel__item-head">
+                    <img
+                      width="180"
+                      :src="
+                        comic.thumbnail.path + `.` + comic.thumbnail.extension
+                      "
+                      alt="character"
+                    />
+                  </div>
+                  <div class="carousel__item-body text-end">
+                    <p class="title">{{ comic.title }}</p>
+                    <p>{{ comic.pageCount }}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2 my-2"
+        class="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2 my-5"
         v-for="comic in comics"
       >
         <div class="flyout-col mvl-flyout-card-container">

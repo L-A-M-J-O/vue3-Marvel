@@ -1,5 +1,5 @@
 // cores/DataCore.js
-import { sendDataRequest, sendDataRequestID, sendDataRequestImage, sendDataRequestIDComics, sendDataRequestIDSeries, sendDataRequestName, sendDataRequestComics, sendDataRequestComicsName, sendDataRequestSeries } from '../externalServices/getDataMarvel';
+import { sendDataRequest, sendDataRequestID, sendDataRequestImage, sendDataRequestIDComics, sendDataRequestIDSeries, sendDataRequestName, sendDataRequestComics, sendDataRequestComicsName, sendDataRequestSeries, sendDataRequestSeriesName} from '../externalServices/getDataMarvel';
 import { SuperHeroe } from '../../domain/models/SuperHeroe';
 export async function sendData() {
     // Realizar lógica adicional si es necesario
@@ -19,6 +19,10 @@ export async function listDataComicsName(name: string) {
 }
 export async function listDataSeries() {
     const response = await sendDataRequestSeries();
+    return response.results
+}
+export async function listDataSeriesName(name: string) {
+    const response = await sendDataRequestSeriesName(name);
     return response.results
 }
 export async function ListDataName(name: string) {

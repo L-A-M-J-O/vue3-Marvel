@@ -19650,16 +19650,18 @@ footer {
   max-width: 500px;
   display: flex;
   justify-content: center;
+  left: 0%;
   flex-direction: column;
 }
 
 .carousel__item {
   display: flex;
   align-items: center;
-  position: absolute;
   width: 100%;
   padding: 0 12px;
   opacity: 0;
+  top: 0%;
+  position: absolute;
   filter: drop-shadow(0 2px 2px #555);
   will-change: transform, opacity;
   animation: carousel-animate-vertical 27s linear infinite;
@@ -19698,8 +19700,9 @@ footer {
 }
 
 .box-comics {
-  margin-top: 200px;
-  margin-bottom: 400px;
+  width: 100%;
+  height: 300px;
+  margin-top: 3rem;
 }
 
 .carousel__item:last-child {
@@ -19738,6 +19741,36 @@ footer {
   .box-comics {
     margin-top: 0;
     margin-bottom: 0;
+  }
+  .carousel {
+    left: 20%;
+  }
+  .carousel__item {
+    top: 100%;
+  }
+}
+@media (min-width: 1400px) {
+  .box-comics {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .carousel {
+    left: 5%;
+  }
+  .carousel__item {
+    top: 100%;
+  }
+}
+@media (min-width: 1600px) {
+  .box-comics {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .carousel {
+    left: 35%;
+  }
+  .carousel__item {
+    top: 100%;
   }
 }
 @keyframes carousel-animate-vertical {
