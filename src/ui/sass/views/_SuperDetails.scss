@@ -20,8 +20,12 @@
   border: 2px solid #212529;
 }
 @media (min-width: 1800px) {
+  .img-super-details-s {
+    width: 100%;
+    height: 50vh;  
+  }
   .img-super-details {
-    height: auto;
+    height: auto;  
   }
 }
 

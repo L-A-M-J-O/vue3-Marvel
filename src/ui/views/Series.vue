@@ -34,7 +34,6 @@ document.addEventListener("keyup", function (event) {
 });
 onMounted(async () => {
   series.value = await fetchDataSeries();
-  console.log(seriesName.value);
 });
 </script>
 <template>

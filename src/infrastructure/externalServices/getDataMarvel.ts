@@ -14,7 +14,7 @@ export async function sendDataRequest() {
 }
 export async function sendDataRequestComics() {
     try {
-        const response = await axios.get(`https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=${clavePublic}&hash=${hashed}&limit=9`)
+        const response = await axios.get(`https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=${clavePublic}&hash=${hashed}&limit=18`)
             .then((data) => { return data.data.data });
         return response
     } catch (error) {

@@ -255,3 +255,87 @@ hr.sep-3::after {
   font-family: "Squada One", cursive;
   color: #ffffff;
 }
+.cardH {
+  width: auto;
+  height: auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: 16px;
+  border-radius: 4px;
+  .header {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .body {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .body-btn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .description {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .skeleton {
+    opacity: 0.7;
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+  .skeleton-text {
+    width: 300px;
+    height: 1em;
+    margin-bottom: 0.25rem;
+    border-radius: 0.125rem;
+  }
+  .skeleton-text:last-child {
+    margin-bottom: 0;
+    width: 300px;
+  }
+  .skeleton-p {
+    width: 300px;
+    height: 1em;
+    margin-bottom: 0.25rem;
+    border-radius: 0.125rem;
+  }
+  .skeleton-p:last-child {
+    margin-bottom: 0;
+    width: 350px;
+  }
+  .skeleton-btn {
+    width: 300px;
+    height: 2em;
+    margin-bottom: 0.25rem;
+    border-radius: 0.125rem;
+  }
+  .skeleton-btn:last-child {
+    margin-bottom: 0;
+    width: 300px;
+  }
+}
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}

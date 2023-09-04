@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref, watch, computed } from "vue";
 import { SuperHeroe } from "../../domain/models/SuperHeroe";
 import { useData } from "../../composables/useData";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { useStore } from "../../stores/index";
 import "swiper/css";
 import "swiper/css/pagination";
 import Comics from "../views/Comics.vue";
@@ -14,9 +15,9 @@ const SuperHeroes = ref<SuperHeroe[]>();
 const SuperHeroesName = ref<SuperHeroe[]>();
 const events = ref();
 const name = ref("");
+const store = useStore();
 const nameVacio = ref<boolean>(false);
 const modules = ref([Autoplay, Pagination, Navigation]);
-
 watch(
   () => name.value,
   async () => {
@@ -24,6 +25,12 @@ watch(
       SuperHeroes.value = await fetchDataList();
       nameVacio.value = false;
     }
+  }
+);
+watch(
+  () => SuperHeroes.value,
+  () => {
+    store.change();
   }
 );
 const handleSearch = async () => {
@@ -99,7 +106,191 @@ onMounted(async () => {
         >
           <h6>No encontramos tu Super Heroe</h6>
         </div>
+        <div class="row row justify-content-center" v-if="store.stat">
+          <div class="cardH col-4 flex-grow m-2">
+          <div class="cardH__header flex flex-wrap justify-center">
+            <div class="cardH__title mx-3 my-3">
+              <div class="skeleton skeleton-text"></div>
+              <div class="skeleton skeleton-text"></div>
+            </div>
+          </div>
+          <div class="cardH__body flex flex-wrap my-5 justify-center">
+            <div class="skeleton skeleton-text mx-2"></div>
+            <div class="skeleton skeleton-text mx-2"></div>
+          </div>
+          <div
+            class="cardH__body-btn flex flex-wrap justify-content-center mb-5"
+          >
+            <div class="skeleton skeleton-btn mx-2"></div>
+            <div class="skeleton skeleton-btn mx-2"></div>
+          </div>
+        </div>
+          <div class="cardH col-4 flex-grow m-2">
+            <div class="cardH__header flex flex-wrap justify-center">
+              <div class="cardH__title mx-3 my-3">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+            </div>
+            <div class="cardH__body flex flex-wrap my-5 justify-center">
+              <div class="skeleton skeleton-text mx-2"></div>
+              <div class="skeleton skeleton-text mx-2"></div>
+            </div>
+            <div
+              class="cardH__body-btn flex flex-wrap justify-content-center mb-5"
+            >
+              <div class="skeleton skeleton-btn mx-2"></div>
+              <div class="skeleton skeleton-btn mx-2"></div>
+            </div>
+          </div>
+          <div class="cardH col-4 flex-grow m-2">
+            <div class="cardH__header flex flex-wrap justify-center">
+              <div class="cardH__title mx-3 my-3">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+            </div>
+            <div class="cardH__body flex flex-wrap my-5 justify-center">
+              <div class="skeleton skeleton-text mx-2"></div>
+              <div class="skeleton skeleton-text mx-2"></div>
+            </div>
+            <div
+              class="cardH__body-btn flex flex-wrap justify-content-center mb-5"
+            >
+              <div class="skeleton skeleton-btn mx-2"></div>
+              <div class="skeleton skeleton-btn mx-2"></div>
+            </div>
+          </div>
+          <div class="cardH col-4 flex-grow m-2">
+            <div class="cardH__header flex flex-wrap justify-center">
+              <div class="cardH__title mx-3 my-3">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+            </div>
+            <div class="cardH__body flex flex-wrap my-5 justify-center">
+              <div class="skeleton skeleton-text mx-2"></div>
+              <div class="skeleton skeleton-text mx-2"></div>
+            </div>
+            <div
+              class="cardH__body-btn flex flex-wrap justify-content-center mb-5"
+            >
+              <div class="skeleton skeleton-btn mx-2"></div>
+              <div class="skeleton skeleton-btn mx-2"></div>
+            </div>
+          </div>
+          <div class="cardH col-4 flex-grow m-2">
+            <div class="cardH__header flex flex-wrap justify-center">
+              <div class="cardH__title mx-3 my-3">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+            </div>
+            <div class="cardH__body flex flex-wrap my-5 justify-center">
+              <div class="skeleton skeleton-text mx-2"></div>
+              <div class="skeleton skeleton-text mx-2"></div>
+            </div>
+            <div
+              class="cardH__body-btn flex flex-wrap justify-content-center mb-5"
+            >
+              <div class="skeleton skeleton-btn mx-2"></div>
+              <div class="skeleton skeleton-btn mx-2"></div>
+            </div>
+          </div>
+          <div class="cardH col-4 flex-grow m-2">
+            <div class="cardH__header flex flex-wrap justify-center">
+              <div class="cardH__title mx-3 my-3">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+            </div>
+            <div class="cardH__body flex flex-wrap my-5 justify-center">
+              <div class="skeleton skeleton-text mx-2"></div>
+              <div class="skeleton skeleton-text mx-2"></div>
+            </div>
+            <div
+              class="cardH__body-btn flex flex-wrap justify-content-center mb-5"
+            >
+              <div class="skeleton skeleton-btn mx-2"></div>
+              <div class="skeleton skeleton-btn mx-2"></div>
+            </div>
+          </div>
+          <div class="cardH col-4 flex-grow m-2">
+            <div class="cardH__header flex flex-wrap justify-center">
+              <div class="cardH__title mx-3 my-3">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+            </div>
+            <div class="cardH__body flex flex-wrap my-5 justify-center">
+              <div class="skeleton skeleton-text mx-2"></div>
+              <div class="skeleton skeleton-text mx-2"></div>
+            </div>
+            <div
+              class="cardH__body-btn flex flex-wrap justify-content-center mb-5"
+            >
+              <div class="skeleton skeleton-btn mx-2"></div>
+              <div class="skeleton skeleton-btn mx-2"></div>
+            </div>
+          </div>
+          <div class="cardH col-4 flex-grow m-2">
+            <div class="cardH__header flex flex-wrap justify-center">
+              <div class="cardH__title mx-3 my-3">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+            </div>
+            <div class="cardH__body flex flex-wrap my-5 justify-center">
+              <div class="skeleton skeleton-text mx-2"></div>
+              <div class="skeleton skeleton-text mx-2"></div>
+            </div>
+            <div
+              class="cardH__body-btn flex flex-wrap justify-content-center mb-5"
+            >
+              <div class="skeleton skeleton-btn mx-2"></div>
+              <div class="skeleton skeleton-btn mx-2"></div>
+            </div>
+          </div>
+
+          <div class="cardH col-4 flex-grow m-2">
+            <div class="cardH__header flex flex-wrap justify-center">
+              <div class="cardH__title mx-3 my-3">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+            </div>
+            <div class="cardH__body flex flex-wrap my-5 justify-center">
+              <div class="skeleton skeleton-text mx-2"></div>
+              <div class="skeleton skeleton-text mx-2"></div>
+            </div>
+            <div
+              class="cardH__body-btn flex flex-wrap justify-content-center mb-5"
+            >
+              <div class="skeleton skeleton-btn mx-2"></div>
+              <div class="skeleton skeleton-btn mx-2"></div>
+            </div>
+          </div>
+          <div class="cardH col-4 flex-grow m-2">
+            <div class="cardH__header flex flex-wrap justify-center">
+              <div class="cardH__title mx-3 my-3">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+            </div>
+            <div class="cardH__body flex flex-wrap my-5 justify-center">
+              <div class="skeleton skeleton-text mx-2"></div>
+              <div class="skeleton skeleton-text mx-2"></div>
+            </div>
+            <div
+              class="cardH__body-btn flex flex-wrap justify-content-center mb-5"
+            >
+              <div class="skeleton skeleton-btn mx-2"></div>
+              <div class="skeleton skeleton-btn mx-2"></div>
+            </div>
+          </div>
+        </div>
         <div
+          v-else
           class="col-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 m-2"
           v-for="Heroe in SuperHeroes"
         >

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
 import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -21,8 +18,6 @@ onMounted(async () => {
   SuperHeroeDetails.value = await DetailsDataList(idSuperHeroe.value);
   comicsHeroe.value = await DetailsComics(idSuperHeroe.value);
   seriesHeroe.value = await DetailsSeries(idSuperHeroe.value);
-  console.log(SuperHeroeDetails.value);
-  console.log(seriesHeroe.value);
 });
 </script>
 
@@ -32,6 +27,11 @@ onMounted(async () => {
       <div
         class="col-sm-12 col-md-12 col-lg-12 col-xl-4 box-main-details-img p-0"
       >
+      <div class="col-2">
+        <button class="button-49" @click="$router.push({ path: `/` })">
+          <i class="bi bi-arrow-90deg-left"></i>
+        </button>
+      </div>
         <div class="d-flex justify-content-center">
           <div class="col-12 box-border">
             <h3 class="header-sprite-p text-center m-2">
@@ -124,7 +124,7 @@ onMounted(async () => {
         v-for="serie in seriesHeroe"
       >
         <img
-          class="img-super-details"
+          class="img-super-details-s"
           :src="serie.thumbnail.path + `.` + serie.thumbnail.extension"
           alt="comics"
         />
