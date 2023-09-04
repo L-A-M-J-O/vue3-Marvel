@@ -1,12 +1,12 @@
 # vue-marvel
 
-Tecnology and Librery
+## Tecnology and Librery
 
-##  "pinia": "^2.1.6",
-##  "sass": "^1.66.1",
-##  "swiper": "^10.2.0",
-##  "axios": "^1.5.0",
-##  "bootstrap": "^5.3.1", "bootstrap-icons": "^1.10.5",
+`"pinia": "^2.1.6",`
+`"sass": "^1.66.1",`
+`"swiper": "^10.2.0",`
+`"axios": "^1.5.0",`
+`"bootstrap": "^5.3.1", "bootstrap-icons": "^1.10.5",`
 
 This template should help get you started developing with Vue 3 in Vite.
 
